@@ -191,8 +191,9 @@ export class Router {
   }
 
   getCanonicalUrl(url) {
-
-    if (url[0] === '.') {
+		if (url === '') {
+			url = '/';
+		}  else if (url[0] === '.') {
       url = url.substr(1);
     }
 
